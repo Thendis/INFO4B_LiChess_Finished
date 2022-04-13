@@ -1,0 +1,60 @@
+********************************************************
+(DEADLINE : Semaine du 11/04) : [01/03/2022 - Depart]
+********************************************************
+Choix du sujet : LiChess -> "Je veux jouer avec beaucoup de données"
+
+/*
+	Dans une partie : 16x2 pièces (Blanche et NOir)
+		- 8x2 Pions
+		- 2x2 Cavaliers
+		- 2x2 Tours
+		- 2x2 Fous
+		- 1x2 Rois
+		- 1x2 Reines
+	/!\ >> Le PATH commence selon la ou le projet a été ouvert dans l'IDE
+*/
+
+Besoin de deux codes disctinct :
+
+- Serveur :
+	Va recevoir les demandes du/des clients, découper les traitements entre plusieurs THREADS, sur plusieurs COEURS de PROCESEURS. Puis vas renvoyer une réponses courtes a la demande.
+	
+- Client :
+	Va demander différentes choses au serveur. En attendant la réponse du serveur à sa demande, le client servira de PROCESSEUR secondaire au serveur. 
+	Recevra des PACKET d'informations qu'il devra traiter et renvoyer au serveur.
+
+A IMPLEMENTER :
+
+- Une méthode pour isoler une unique partie selon un ID (ex : getPartie(0) => Renvoie toute la zone de texte de la première partie)
+
+- Trouver un moyen d'accéder rapidement a la partie x (Trie rapide ? /2 successife ?)
+
+- Un THREAD "Dealer" qui va créer des THREADS en boucle (Tant que MAXTHREAD pas dépassé), et leur assigner une ou plusieurs parties a traiter. Les résultats seront envoyé au serveur qui va les enregistrer.
+
+- "Dealer" sera le seul a avoir accès à la liste total de partie a traiter (Lien passé en paramètre du père). -> Ne sera pas soumis au synchronized (Pas besoin d'attendre, distribura tant que reste des parties)
+
+
+>> Séparation des parties + Construction de packages + Organisation des fichiers + Git <<
+<< Une communication entre client et serveur stable >>
+********************************************************
+(DEADLINE : Semaine du 11/04) : 22/03/2022
+********************************************************
+- Difficulté pour envoyer des Object Serializable.
+	Besoin de créer deux Streams différent (Object / String )
+- Problème d'afficchage (¬í♣) sur le Listener Client (Mais pas sur Listener Objet) X
+- TOUJOURS créer le writer en premier sinon nous entrons dans une situation de verrous mortel car l'autre reader va attendre le writer qui n'arrivera que après car le second reader attend le second writer
+********************************************************
+(DEADLINE : Semaine du 11/04) : 
+********************************************************
+********************************************************
+(DEADLINE : Semaine du 11/04) : 
+********************************************************
+********************************************************
+(DEADLINE : Semaine du 11/04) : 
+********************************************************
+********************************************************
+(DEADLINE : Semaine du 11/04) : 
+********************************************************
+********************************************************
+(DEADLINE : Semaine du 11/04) : 
+********************************************************
